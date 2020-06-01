@@ -65,12 +65,7 @@
 
             document.getElementById("loadStatus").innerText = "Loading...";
 
-            //var url = "https://webconfigurator.blob.core.windows.net/model-streaming/Car_Mustang_Tyres.glb"
-            //var url = "https://webconfigurator.blob.core.windows.net/model-streaming/Thonker.glb";
-
-            //var url="https://webconfigurator.blob.core.windows.net/model-streaming/Car_Mustang_Body.glb";
-
-            var url = "https://standardconfigurator.blob.core.windows.net/config/Car_Mustang_Body.glb"
+            var url = "path to my gltf model"
             var xhr = new XMLHttpRequest();
             xhr.open("GET", url, true);
             xhr.responseType = "blob";
@@ -120,7 +115,7 @@
 
                 BABYLON.SceneLoader.Append("", url, scene, function () {
                     scene.createDefaultCamera(true, true, true);
-                }, undefined, undefined, ".glb");
+                }, undefined, undefined, ".gltf");
 
                 return scene;
 
